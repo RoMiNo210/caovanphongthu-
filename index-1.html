@@ -34,10 +34,10 @@ input,textarea,select{width:100%;padding:11px 12px;border:1px solid #394766;back
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* BƯỚC CẤU HÌNH: thay 2 giá trị này bằng thông tin từ dự án Supabase MỚI. */
-const SUPABASE_URL = "DAN_SUPABASE_PROJECT_URL_VAO_DAY";
-const SUPABASE_PUBLISHABLE_KEY = "DAN_SUPABASE_PUBLISHABLE_KEY_VAO_DAY";
-const configured = SUPABASE_URL.startsWith("https://") &&
-  !SUPABASE_URL.includes("DAN_") && !SUPABASE_PUBLISHABLE_KEY.includes("DAN_");
+const SUPABASE_URL = "https://rrpogfsoiuwkrubaujvi.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_9M2ne0k2IU0-LwUXXeV0mg_jxGaM5tI";
+const configured = SUPABASE_URL.startsWith("https://rrpogfsoiuwkrubaujvi.supabase.co/auth/v1/.well-known/jwks.json") &&
+  !SUPABASE_URL.includes("https://rrpogfsoiuwkrubaujvi.supabase.co") && !SUPABASE_PUBLISHABLE_KEY.includes("sb_publishable_9M2ne0k2IU0-LwUXXeV0mg_jxGaM5tI_");
 const db = configured ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) : null;
 let session = null, profile = null, products = [], authMode = "login";
 const $ = id => document.getElementById(id);
